@@ -1,0 +1,11 @@
+Model Information:
+* title:	08_NENE_M_03_260
+* source:	https://sketchfab.com/3d-models/08-nene-m-03-260-0a64b9e5c3444ca399b8ac11499f58ce
+* author:	mgruosso (https://sketchfab.com/mgruosso)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "08_NENE_M_03_260" (https://sketchfab.com/3d-models/08-nene-m-03-260-0a64b9e5c3444ca399b8ac11499f58ce) by mgruosso (https://sketchfab.com/mgruosso) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

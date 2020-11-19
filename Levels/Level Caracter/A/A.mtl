@@ -1,0 +1,58 @@
+newmtl A Material de inflación frontal
+Ka 0.012984 0.012984 0.012984
+Kd 0.819608 0.690196 0.545098
+Ks 0.028160 0.028160 0.028160
+Ns 25.634241
+d 1.000000
+Tr 0.000000
+map_Kd Blasa-1-GrainA.psd 
+map_Bump Blasa-1-GrainA.psd 
+
+newmtl A Material de bisel frontal
+Ka 0.012984 0.012984 0.012984
+Kd 0.819608 0.690196 0.545098
+Ks 0.028160 0.028160 0.028160
+Ns 25.634241
+d 1.000000
+Tr 0.000000
+map_Kd Blasa-1-GrainA.psd 
+map_Bump Blasa-1-GrainA.psd 
+
+newmtl A Material de extrusión
+Ka 0.012984 0.012984 0.012984
+Kd 0.819608 0.690196 0.545098
+Ks 0.028160 0.028160 0.028160
+Ns 25.634241
+d 1.000000
+Tr 0.000000
+map_Kd Blasa-1-GrainA.psd 
+map_Bump Blasa-1-GrainA.psd 
+
+newmtl A Material de bisel posterior
+Ka 0.012984 0.012984 0.012984
+Kd 0.819608 0.690196 0.545098
+Ks 0.028160 0.028160 0.028160
+Ns 25.634241
+d 1.000000
+Tr 0.000000
+map_Kd Blasa-1-GrainA.psd 
+map_Bump Blasa-1-GrainA.psd 
+
+newmtl A Material de inflación posterior
+Ka 0.012984 0.012984 0.012984
+Kd 0.819608 0.690196 0.545098
+Ks 0.028160 0.028160 0.028160
+Ns 25.634241
+d 1.000000
+Tr 0.000000
+map_Kd Blasa-1-GrainA.psd 
+map_Bump Blasa-1-GrainA.psd 
+
+newmtl Material de plano de tierra
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ns 6.062866
+d 0.600000
+Tr 0.400000
+
