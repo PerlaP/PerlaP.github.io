@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+     <!-- <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>  -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <!--<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>-->
+
+    </script>
+    <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+        <!--<button class="button" href="Geometry/eath.html">Planeta</button>-->
+        <form>
+            <input type="button" onclick="window.location.href='Geometry/eathr.html';" value="Planeta" />
+            <input type="button" onclick="window.location.href='Geometry/ice-cream.html';" value="Helado" />
+            <input type="button" onclick="window.location.href='../geometry.html';" value="Jugar!" />
+            <input type="button" onclick="window.location.href='../../index.html';" value="Volver Menu" />
+
+        </form>
+    </div>
+    <body>
+         <a-scene background="color: #FBE0D8">
+            <a-assets>
+                <audio id="blip1" src="../../showcase/anime-UI/audio/321103__nsstudios__blip1.wav"></audio>
+                <audio id="blip2" src="../../showcase/anime-UI/audio/321104__nsstudios__blip2.wav"></audio>
+                <audio id="shot" src="shot.ogg"></audio>
+                <a-mixin id="tree-obj" src="house/Cartoon House.obj"></a-mixin>
+                <a-mixin id="tree-mtl" src="house/Cartoon_House.mtl"></a-mixin>
+                <a-mixin id="sphere" geometry="primitive: sphere"></a-mixin>
+                <a-mixin id="cone" geometry="primitive: cone"></a-mixin>
+                <a-mixin id="hoverColor" event-set__mouseenter="material.color: #CC435F"></a-mixin>
+                <a-mixin id="selectColor" event-set__click="material.color: #876A96"></a-mixin>
+                <a-mixin id="leaveColor" event-set__mouseleave="material.color: #9DE0AD"></a-mixin>
+                <a-mixin id="red" material="color: #F35F5F"></a-mixin>
+                <a-mixin id="green" material="color: #9DE0AD"></a-mixin>
+                <a-mixin id="blue" material="color: #36A3EB"></a-mixin>
+                <a-mixin id="pink" material="color: #FF9966"></a-mixin>
+                <a-mixin id="yellow" material="color: #F1EA65"></a-mixin>
+                <a-mixin id="sphere" geometry="primitive: sphere"></a-mixin>
+            </a-assets>
+        
+              
+            <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable"></a-entity>
+      
+            <a-entity position="0 .6 4">
+              <a-camera>
+                <a-entity raycaster="far: 30; objects: .intersectable"
+                          cursor
+                          geometry="primitive: ring; radiusOuter: 0.015;
+                                    radiusInner: 0.01; segmentsTheta: 32"
+                          material="color: #283644; shader: flat"
+                          position="0 0 -0.75"></a-entity>
+              </a-camera>
+            </a-entity>
+
+            <a-entity id="backgroundCube"
+                class="intersectable"
+                position="0 -50 -250" 
+                scale="0.10 0.10 0.10"
+                obj-model="obj: #tree-obj; mtl: #tree-mtl"
+                animation = "startEvents: click; property: rotation; to: 0 360 0; easing: linear; dur: 2000">
+            </a-entity>
+        </a-scene> 
+    </body>
+</html>
+        

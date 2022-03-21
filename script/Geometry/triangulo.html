@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Triangulo</title>
+        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+
+    </head>
+
+    <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+        <button onclick="window.location.href='../../script/Geometry/esfera.html'" class="button">Esfera</button>
+        <button onclick="window.location.href='../../script/Geometry/cuadrado.html'" class="button">Cuadrado</button>
+        <button onclick="window.location.href='../../script/Geometry/triangulo.html'" class="button">Traingulo</button>
+        <button onclick="window.location.href='../../script/Geometry/ice-cream.html'" class="button">Helado</button>
+        <button onclick="window.location.href='../../script/Geometry/eathr.html'" class="button">Planeta</button>
+        <button onclick="window.location.href='../../index.html'" class="button">Volver Menu</button>
+        
+    </div>
+    <body>
+        <a-scene>
+            
+            <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
+        
+            <a-triangle position="0 2 -3" rotation="0 0 0" color="#4CC3D9" scale="3 3 3" shadow
+                    event-set__enter="_event: mouseenter; color: #FF33F0"
+                    event-set__leave="_event: mouseleave; color: #BE7CF5">
+                <!-- This animation begins when the box is clicked with the mouse. -->
+                <a-animation attribute="rotation"
+                    dur="3000"
+                    fill="forwards"
+                    to="360 0 0"
+                    direction="alternate"
+                    begin="click"></a-animation>
+            </a-triangle>
+        
+            
+            <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane> -->
+            <a-sky color="#ECECEC"></a-sky>
+        </a-scene>
+    </body>
+    
+
+</html>
