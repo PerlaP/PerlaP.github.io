@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>AR-WEB</title>
+	<!-- Favicon-->
+	
+	<!-- Font Awesome icons (free version)-->
+	<script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+	<!-- Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link rel="stylesheet" href="../../css/styles.css" />
+	<link rel="stylesheet" href="../../css/main.css" />
+	
+</head>
+<body id="page-top">
+
+	<!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="../../index.html">AR-Web</a>
+            <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../museoGeometry.html">Geometría</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../Numeros/num0.html">Números</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../Vocales/A/vocal-A.html">Vocales</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+							Ejemplos con camara
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="../script/Examples/example.html">Ejemplo con Disparador Hiro</a>
+							<a class="dropdown-item" href="../script/Examples/exampleI.html">Ejemplo con Disparador Imagen</a>
+							<a class="dropdown-item" href="../script/Examples/example2.html">Ejemplo Video</a>
+							<a class="dropdown-item" href="../script/Examples/example3.html">Ejemplo Subir Imagen</a>
+							<a class="dropdown-item" href="../../assets//5cahN.png" download="Disparador Hiro">Descargar Disparador Hiro</a>
+							<a class="dropdown-item" href="../../assets/5cahN.png" download="Disparador Imagen">Descargar Disparador Imagen</a>
+							
+						</div>
+					</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	<br>
+	<br>
+	<div id="wrapper" style="margin-top: 151px;">
+		
+		<div id="container-input">
+			<div class="wrap-file">
+				<div class="content-icon-camera">
+					<input type="file" id="file" name="file[]" accept="image/*" multiple />
+					<div class="icon-camera"></div>
+				</div>
+				<div id="preview-images">
+					
+				</div>
+			</div>
+			<button id="publish">Publicar</button>
+            
+		</div>
+		<br>
+		<h4>Ingresar solo archivos con extension .png .jpg .jpeg .gif,<br> 
+			dependiendo del tamaño y calidad puede que se vea o no la imagen sobre el dispardor.</h4>
+		<div class="preload">
+			<img src="../../assets/preload.gif" alt="preload" />
+		</div>
+		<h2 id="success"></h2>
+		
+	</div>
+	<!-- Footer-->
+	<footer class="footer text-center">
+		<div class="container">
+			<div class="row">
+				<!-- Footer Location-->
+				<div class="col-lg-4 mb-5 mb-lg-0">
+					<h4 class="text-uppercase mb-4">Direcci&oacute;n</h4>
+					<p class="lead mb-0">
+						2215 John Daniel Drive
+						<br />
+						Clark, MO 65243
+					</p>
+				</div>
+				<!-- Footer Social Icons-->
+				<div class="col-lg-4 mb-5 mb-lg-0">
+					<h4 class="text-uppercase mb-4">Encontranos en</h4>
+					<a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+					<a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+					<a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+					<a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+				</div>
+				<!-- Footer About Text-->
+				<div class="col-lg-4">
+					<h4 class="text-uppercase mb-4">Sobre Nosotros</h4>
+					<p class="lead mb-0">
+						Mi nombre es Perla Padilla, soy alumna en la carrera de Ingieria en Informatica.
+						
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Copyright Section-->
+	<div class="copyright py-4 text-center text-white">
+		<div class="container"><small>Copyright © Your Website 2020</small></div>
+	</div>
+	<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+	<div class="scroll-to-top d-lg-none position-fixed">
+		<a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+	</div>
+	<script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+
+    <script src="../../js/main.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+	<title>Galería de Imágenes</title>
+</head>
+<body style="margin : 0px; overflow: hidden;">
+	<ul></ul> 
+   	<script>
+   
+		(function () {
+
+			'use strict'
+
+            
+
+			fetch('../../database.json', {
+				headers: { 'Content-Type': 'application/json' }
+			})
+			.then(function (response) {
+				return response.json();
+			})
+			.then(function (data) {
+				data.forEach(function (picture) {
+					var image = new Image();
+					image.width = 200;
+					image.src = '../../storage/' + picture.file_name;
+
+					var li = document.createElement('li');
+					li.appendChild(image);
+                    console.log(picture.file_name);
+
+					document.querySelector('ul').appendChild(li);
+                    
+				})
+			});
+
+		})();
+	</script> 
+
+    
+</body>
+</html>

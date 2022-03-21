@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    
+    
+
+    
+    
+     <div style="position: fixed; top: 10px; width: 100%;text-align: center;z-index: 1;">
+        <button class="button" id="btn1">Palta</button>
+        <button class="button" id="btn2">Sistema Digestivo</button>
+        <button class="button" id="btn3">Hur&oacute;n</button>
+        <button class="button" id="btn4">Numero 5</button>
+        <button class="button" id="btn5">Vocal A</button>
+    </div> 
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs>
+            <a-marker preset="hiro">
+                <a-entity
+                id="entityID1"
+                position="0 -1 0"
+                gltf-model="../../assets/Numero/num5-B.glb"
+                ></a-entity>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+
+        <script>
+            document.getElementById("btn1").addEventListener("click",(e)=>{
+                var el = document.querySelector("#entityID1");
+                el.setAttribute("gltf-model",'../../assets/Palta/Avocado.gltf');
+                el.setAttribute("scale",'50 50 50');
+            })
+
+            document.getElementById("btn2").addEventListener("click",(e)=>{
+                var el = document.querySelector("#entityID1");
+                el.setAttribute("gltf-model",'../../script/Digestive System/digestive_system/scene.gltf');
+                el.setAttribute("scale",'3, 3, 3');
+                el.setAttribute("position",'0, -1, 0');
+            })
+
+            document.getElementById("btn3").addEventListener("click",(e)=>{
+                var el = document.querySelector("#entityID1");
+                el.setAttribute("gltf-model",'../../assets/Vocales/huron.glb');
+               /* el.setAttribute("scale",'10, 10, 10');*/
+                el.setAttribute("position",'0, -1, 0');
+            })
+
+
+            document.getElementById("btn4").addEventListener("click",(e)=>{
+                var el = document.querySelector("#entityID1");
+                el.setAttribute("gltf-model",'../../assets/Numero/num5-B.glb');
+                /*el.setAttribute("scale",'10, 10, 10');*/
+                el.setAttribute("position",'0, -1, 0');
+            })
+
+            document.getElementById("btn5").addEventListener("click",(e)=>{
+                var el = document.querySelector("#entityID1");
+                el.setAttribute("gltf-model",'../../assets/Vocales/vocal A-2.glb');
+                /*el.setAttribute("scale",'10, 10, 10');*/
+                el.setAttribute("position",'0, -1, 0');
+            })
+        </script> 
+    </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - GLTFloader</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+		
+		<!-- Import maps polyfill -->
+		<!-- Remove this when import maps will be widely supported -->
+		<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "../../js/three.module.js"
+				}
+			}
+		</script>
+
+		<script type="module">
+
+			import * as THREE from 'three';
+
+			import { OrbitControls } from '../../js/controls/OrbitControls.js';
+			import { GLTFLoader } from '../../js/loaders/GLTFLoader.js';
+			import { RGBELoader } from '../../js/loaders/RGBELoader.js';
+
+			let camera, scene, renderer;
+
+			init();
+			render();
+
+			function init() {
+
+				const container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
+				camera.position.set( - 1.8, 0.6, 2.7 );
+
+				scene = new THREE.Scene();
+
+				new RGBELoader()
+					.setPath( 'texture/' )
+					.load( 'studio_small_09_4k.hdr', function ( texture ) {
+
+						texture.mapping = THREE.EquirectangularReflectionMapping;
+
+						scene.background = texture;
+						scene.environment = texture;
+
+						render();
+
+						// model
+
+						//// GELTFLoader: es una especificación de formato abierto para la entrega y carga eficientes de contenido 3D.
+						const loader = new GLTFLoader().setPath( 'digestive_system/' );
+						loader.load( 'scene.gltf', function ( gltf ) {
+              				scene.scale.set(3, 3, 3);
+              				scene.position.set(0, -1, 0);
+							scene.add( gltf.scene );
+
+							render();
+
+						} );
+
+					} );
+
+				//WebGLRenderer El renderizador WebGL muestra tus escenas bellamente diseñadas usando WebGL .
+				//antialias: si se debe realizar suavizado. El valor predeterminado es falso
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				//setPixelRatio: Establece la proporción de píxeles del dispositivo. Esto generalmente se usa para dispositivos HiDPI para evitar que el lienzo de salida se vea borroso.
+				renderer.setPixelRatio( window.devicePixelRatio ); // window.devicePixelRatio La propiedad de sólo-lectura Window.devicePixelRatiodevuelve la relación de tamaño (vertical) de un píxel físico en el dispositivo de visualización real respecto de un dispositivo de tamaño de píxel independiente
+				//setSize: Cambia el tamaño del lienzo de salida a (ancho, alto) teniendo en cuenta la proporción de píxeles del dispositivo y también configura la ventana gráfica para que se ajuste a ese tamaño, comenzando en (0, 0).
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				//THREE.ACESFilmicToneMapping: se utiliza para aproximar la apariencia de alto rango dinámico (HDR) en el medio de bajo rango dinámico de un monitor de computadora estándar o la pantalla de un dispositivo móvil.
+				renderer.toneMapping = THREE.ACESFilmicToneMapping; 
+				//toneMappingExposure: Nivel de exposición del mapeo de tonos. El valor predeterminado es 1
+				renderer.toneMappingExposure = 1;
+				//Define la codificación de salida del renderizador. 
+				renderer.outputEncoding = THREE.sRGBEncoding; // Si el tipo de codificación se cambia después de que un material ya haya utilizado la textura, deberá establecer  Material.needsUpdate to true
+				//método agrega un nodo como el último hijo de un nodo.
+				container.appendChild( renderer.domElement );
+
+				//Los controles de órbita permiten que la cámara orbite alrededor de un objetivo.
+				const controls = new OrbitControls( camera, renderer.domElement );
+				controls.addEventListener( 'change', render ); // utilizar si no hay bucle de animación
+				controls.minDistance = 2;
+				controls.maxDistance = 10;
+				controls.target.set( 0, 0, - 0.2 );
+				controls.update();
+
+				//Registra un evento a un objeto en específico. Puede ser un simple elemento en un archivo, el mismo  documento , una ventana o un  XMLHttpRequest
+				window.addEventListener( 'resize', onWindowResize );
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				//Actualiza la matriz de proyección de la cámara. Debe llamarse después de cualquier cambio de parámetros.
+				camera.updateProjectionMatrix(); 
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+				render();
+
+			}
+
+			//
+
+			function render() {
+
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+
+	</body>
+</html>
