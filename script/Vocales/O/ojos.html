@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>ARWeb - TESIS</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="../../../js/info-message.js"></script>
+  <script src="https://unpkg.com/aframe-extras@3.3.0/dist/aframe-extras.min.js"></script>
+  <script src="../../../js/hide-on-enter-ar.js"></script>
+  <script src="../../../js/ar-shadows.js"></script>
+  <script src="../../../js/ar-hit-test.js"></script>
+  <script src="../../../js/model-viewer.js"></script>
+  <script src="../../../js/background-gradient.js"></script>
+
+  <link href="../../../css/styles.css" rel="stylesheet" />
+  
+  
+</head>
+<body>
+
+  <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+    <!--<button class="button" href="Geometry/eath.html">Planeta</button>-->
+    <form>
+        <input type="button" onclick="window.location.href='vocal-O.html';" value="O" />  
+        <input type="button" onclick="window.location.href='oso.html';" value="OSO" />
+        <input type="button" onclick="window.location.href='../../../index.html';" value="Volver Menu" />
+    </form>
+   
+    <form>
+      <input type="button" onclick="window.location.href='../A/vocal-A.html';" value="A" />
+      <input type="button" onclick="window.location.href='../E/vocal-E.html';" value="E" />
+      <input type="button" onclick="window.location.href='../I/vocal-I.html';" value="I" />
+      <input type="button" onclick="window.location.href='../U/vocal-U.html';" value="U" />
+      
+    </form>
+    
+  </div>
+ 
+  
+  <a-scene background="color: #FBE0D8" 
+        renderer="colorManagement: true;"
+        info-message="htmlSrc: #messageText"
+        model-viewer="gltfModel: #ojos">
+    <a-assets>
+  
+      <a-asset-item id="ojos"
+        src="../../../assets/Vocales/ojos.glb"
+        response-type="arraybuffer" crossorigin="anonymous">
+      </a-asset-item>
+      
+      <a-entity geometry="primitive: cylinder; height: .2; radius: 12;"
+              material="color: #BABABA; src: #floor;
+              metalness: .2; repeat: 50 20; roughness: .1"
+              position="0 0 0">
+      </a-entity>
+
+      <img id="floor" src="../../marble.jpg">
+      <img id="shadow" src="../../../assets/textura/20600112-c04b-492c-8190-8a5ccc06f37d_thumbnails_shadow.png"></img>
+      <a-asset-item id="messageText" src="../../message.html"></a-asset-item>
+
+    </a-assets>
+  </a-scene> 
+  
+</body>
+</html>
