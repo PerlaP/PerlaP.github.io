@@ -1,0 +1,11 @@
+Model Information:
+* title:	Tiger attack eat v01
+* source:	https://sketchfab.com/3d-models/tiger-attack-eat-v01-0233b8f7235643d6ba0c1b911bc0325d
+* author:	Unity  (shehab house) (https://sketchfab.com/shahabahmed)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Tiger attack eat v01" (https://sketchfab.com/3d-models/tiger-attack-eat-v01-0233b8f7235643d6ba0c1b911bc0325d) by Unity  (shehab house) (https://sketchfab.com/shahabahmed) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
